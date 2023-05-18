@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/css/main.ad49aa9b.css" />
+  <link rel="stylesheet" href="css/weather.css" />
+ <style>
+.hover-image-scale {
+  z-index: 1;
+  overflow: hidden;
+}
+.hover-image-scale img {
+  transition: 1s;
+  display: block; 
+}
+.hover-image-scale img:hover {
+  transform: scale(1.2); 
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  min-height: 2em;
+  background: white;
+}
+ </style> 
+</head>
+<header class="text-gray-600 body-font sticky z-40">
+    <div class="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center shadow-3xl shadow-shadow-500">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="img/icon.jpeg" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full">
+        <span class="ml-3 text-xl">Rīgas portals</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900 font-bold">Par Rīgu</a>
+        <a class="mr-5 hover:text-gray-900 font-bold">Pasākumi</a>
+      </nav>
+      <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+<body>
+    <div class="flex justify-center items-center z-40">
+        <div class=" lg:px-20 md:py-12 md:px-6 py-9 px-4 w-full sm:w-full">
+          <div class="lg:flex items-stretch">
+            <div class="lg:w-1/2 ">
+              <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 ">
+                <div class="sm:w-1/2 relative hover-image-scale">
+                  <div>
+                    <div class="containerss shadow-md">
+                      <div class="app-title">
+                          <p>Weather</p>
+                      </div>
+                      <div class="weather-container">
+                          <div class="weather-icon">
+                              <img src="icons/unknown.png" alt="" >
+                          </div>
+                          <div class="temperature-value">
+                              <p>- °<span>C</span></p>
+                          </div>
+                          <div class="temperature-description">
+                              <p> - </p>
+                          </div>
+                          <div class="location">
+                              <p>-</p>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="sm:w-1/2 sm:mt-0 mt-4 relative hover-image-scale">
+                  <div>
+                    <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0 z-40">12 April 2021</p>
+                    <div class="absolute bottom-0 left-0 p-6 z-40">
+                      <h2 class="text-xl font-semibold 5 text-white">TOP apskates vietas</h2>
+                      <p class="text-base leading-4 text-white mt-2">Ikvienam, kurš Rīgā viesojas pirmo reizi, ir jāsāk ar ikonisko objektu apskati...</p>
+                      <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                        <p class="pr-2 text-sm font-medium leading-none">Vairāk</p>
+                        <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img src="https://www.liveriga.com/userfiles/images/apmekle/ko-redzet/top-vietas/brivibas-piemineklis/52401641668_baed2a3deb_5k.jpg?w=700&h=350" class="w-full h-[25rem] hover-image-scale " alt="wall design" />
+                </div>
+              </div>
+              <div class="relative hover-image-scale  mt-8 md:mt-6">
+                <div>
+                  <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0 z-40">12 April 2021</p>
+                  <div class="absolute bottom-0 left-0 md:p-10 p-6 z-40">
+                    <h2 class="text-xl font-semibold 5 text-white">Pasaules klases vēdera prieki</h2>
+                    <p class="text-base leading-4 text-white mt-2">Pilsētas centrā labi paēst iespējams ik uz stūra...</p>
+                    <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                      <p class="pr-2 text-sm font-medium leading-none">Vairāk</p>
+                      <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <img src="https://www.liveriga.com/userfiles/images/apmekle/est-dzert/gardezu-restorani/whitehouse/whitehouse3.png?w=780&mode=3:2|crop" alt="sitting place" class="z-10 w-full h-[38rem] " />
+              </div>
+            </div>
+            <div class="lg:w-1/2 xl:ml-8 lg:ml-4 lg:mt-0 md:mt-6 mt-4 lg:flex flex-col justify-between">
+              <div class="relative hover-image-scale">
+                <div>
+                  <p class="md:p-10 p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0 z-40">12 April 2021</p>
+                  <div class="absolute bottom-0 left-0 md:p-10 p-6 z-40">
+                    <h2 class="text-xl font-semibold 5 text-white">Nokļūšana Rīgā</h2>
+                    <p class="text-base leading-4 text-white mt-2">Pirms ieceļošanas Latvijā, sazinieties ar Jūsu pārvadātāju, lai uzzinātu par Covid - 19 ierobežojumiem!</p>
+                    <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                      <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                      <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <img src="https://www.liveriga.com/userfiles/images/par-rigu/noklusana-riga/BT_ImgCrop_Airbus_LV100_Livery_3D_161120_v01%20mazs.jpg" alt="sitting place" class="w-full h-[40rem] sm:block  " />
+              </div>
+              <div class="sm:flex items-center justify-between xl:gap-x-8 gap-x-6 md:mt-6 mt-4">
+                <div class="relative w-full hover-image-scale">
+                  <div>
+                    <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0 z-40">12 April 2021</p>
+                    <div class="absolute bottom-0 left-0 p-6 z-40">
+                      <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                      <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                      <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                        <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                        <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img src="https://www.liveriga.com/userfiles/images/apmekle/par-rigu/tests-celvedim/vecpilseta-unesco-pasaules-mantojums/52401221412_113fb69df6_3k.jpg?w=1200" class="w-full h-[23rem]" alt="chair" />
+                </div>
+                <div class="relative w-full sm:mt-0 mt-4 hover-image-scale">
+                  <div>
+                    <p class="p-6 text-xs font-medium leading-3 text-white absolute top-0 right-0 z-40">12 April 2021</p>
+                    <div class="absolute bottom-0 left-0 p-6 z-40">
+                      <h2 class="text-xl font-semibold 5 text-white">The Decorated Ways</h2>
+                      <p class="text-base leading-4 text-white mt-2">Dive into minimalism</p>
+                      <a href="javascript:void(0)" class="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline">
+                        <p class="pr-2 text-sm font-medium leading-none">Read More</p>
+                        <svg class="fill-stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.75 12.5L10.25 8L5.75 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <img src="https://www.liveriga.com/userfiles/images/apmekle/par-rigu/tests-celvedim/vecpilseta-unesco-pasaules-mantojums/52402020364_e997c88a5c_3k.jpg?w=1200" class="w-full h-[23rem]" alt="wall design" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<footer class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="img/icon.jpeg" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"> 
+        <span class="ml-3 text-xl">Rīgas portals</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 Dominiks Segals </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
