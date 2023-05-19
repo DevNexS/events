@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/css/main.ad49aa9b.css" />
+  <link rel="stylesheet" href="css/weather.css" />
+ <style>
+.hover-image-scale {
+  z-index: 1;
+  overflow: hidden;
+}
+.hover-image-scale img {
+  transition: 1s;
+  display: block; 
+}
+.hover-image-scale img:hover {
+  transform: scale(1.2); 
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  min-height: 2em;
+  background: white;
+}
+ </style> 
+</head>
+<header class="text-gray-600 body-font sticky z-40">
+    <div class="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center shadow-md shadow-500">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="img/icon.jpeg" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full">
+        <span class="ml-3 text-xl">Rīgas portals</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a href="/" class="mr-5 hover:text-gray-900 font-bold">PAR RĪGU</a>
+        <a href="index.html" class="mr-5 hover:text-gray-900 font-bold">KO REDZĒT</a>
+        <a href="/events.html" class="mr-5 hover:text-gray-900 font-bold">PASĀKUMI</a>
+      </nav>
+      <a href="https://github.com/DevNexS/events" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">GitHub
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path></a>
+        </svg>
+      </button>
+    </div>
+  </header>
+<body class="bg-gray-50 ">
+
+  <section class="w-full bg-nordic-gray-light flex md:pt-0 md:items-center" style="max-width:2560px; height: 40rem;">
+    <img class="absolute w-full md:items-center object-cover object-centre" style="max-width:2560px; height: 40rem; filter: brightness(70%);" src="https://www.2foodtrippers.com/wp-content/uploads/2018/02/Kolonade-Dining-Room-Riga-Restaurants.jpg">
+    <div class="container mx-1/2 mb-36 mt-12 text-center">    
+        <div class="absolute absolute-col w-full px-6 tracking-wide">
+            <h1 class="text-white text-5xl my-4 font-Formular">TOP labākie restorāni</h1>
+            <p class="text-lg leading-relaxed text-white font-Formular lg:w-3/5 mx-auto leading-relaxed" href="#">Ja vēlies atklāt latviskas garšas, vēlreiz izbaudīt jau iemīļotās, atstāt pozitīvu iespaidu uz sadarbības partneriem vai vienkārši iepriecināt mīļoto cilvēku, draugus vai ģimeni, Rīgā atradīsi izsmalcinātus Eiropas, Āzijas un citu pasaules garšu iedvesmotus restorānus.</p>
+        </div>
+      </div>
+    </section>
+
+  <section class="bg-blueGray-50 mt-2">
+    <div class=" flex ml-28 items-start bg-blueGray-50">
+        <div class="flex items-center py-4 overflow-y-auto whitespace-nowrap ">
+          <a href="/" class="text-gray-600 dark:text-gray-400 ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+          </a>
+      
+          <span class="mx-5 text-gray-500 dark:text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </span>
+      
+          <a href="/events.html" class="text-gray-600 dark:text-gray-400 h4ver:underline"> Par Rīgu </a>
+      
+          <span class="mx-5 text-gray-500 dark:text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </span>
+      
+          <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline"> Ko redzēt </a>
+        </div>
+      </div>
+    </section>
+
+<div>
+  <div class="bg-gray-50 lg:py-4 ml-16 items-center lg:flex ">
+      <div class="bg-white lg:mx-8 lg:flex lg:w-[90%] lg:shadow-lg lg:rounded-lg">
+          <div class="lg:w-1/3">
+              <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://www.liveriga.com/userfiles/images/apmekle/est-dzert/gardezu-restorani/whitehouse/whitehouse3.png?w=780&mode=3:2|crop')"></div>
+          </div>
+          <div class="py-12 px-6 max-w-xl lg:max-w-4xl lg:w-4/6">
+              <h2 class="text-3xl text-gray-800 font-bold">Whitehouse</h2>
+              <p class="mt-4 text-gray-600">Restorāns "WHITEHOUSE" atrodas vēsturiskā ēkā Vērmanes parkā un tā ēdienkartē dominē produktu patiesā garša un austvērtīga kvalitāte. "WHITEHOUSE" komandas misija ir radīt neaizmirstamu kulināro pieredzi un sajūtas katram viesim. Kā gleznā katrs krāsas triepiens un simfonijā katrs instruments, restorāna komanda kopā strādā pie tā, lai uzburtu maltīti, kuras garšas un estētika pārsteigs ikvienu.
+              </p>
+              <div class="mt-8">
+                  <a href="https://goo.gl/maps/zJQvNwXXUe4ws2XEA" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Kartē</a>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+
+<div>
+  <div class="bg-gray-50 lg:py-4 ml-16 items-center lg:flex ">
+      <div class="bg-white lg:mx-8 lg:flex lg:w-[90%] lg:shadow-lg lg:rounded-lg">
+          <div class="lg:w-1/3">
+              <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://www.liveriga.com/userfiles/images/apmekle/est-dzert/gardezu-restorani/vincents/vincentsinterjers.jpeg?w=780&mode=3:2|crop')"></div>
+          </div>
+          <div class="py-12 px-6 max-w-xl lg:max-w-4xl lg:w-4/6">
+              <h2 class="text-3xl text-gray-800 font-bold">Vincents</h2>
+              <p class="mt-4 text-gray-600">Restorānu "Vincents" 1994.gadā aizsāka leģendārais latviešu šefpavārs Mārtiņš Rītiņš. Tagad tas ir kļuvis par mūsdienu urbānās eko virtuves stila un kvalitātes etalonu gan Latvijā, gan arī plašāk Eiropā. Restorāna interjers un mākslas galerija rada sentimentālu fonu izcilo Vincenta ēdienu un vīnu baudīšanai.
+              </p>
+              <div class="mt-8">
+                  <a href="https://goo.gl/maps/izEZ1gzRPLLUkPdd7" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Kartē</a>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+
+<div>
+  <div class="bg-gray-50 lg:py-4 ml-16 items-center lg:flex ">
+      <div class="bg-white lg:mx-8 lg:flex lg:w-[90%] lg:shadow-lg lg:rounded-lg">
+          <div class="lg:w-1/3">
+              <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://www.liveriga.com/userfiles/images/est-dzert/labakie-jaunie-restorani/max-cekot-kitchen/img-013.jpg?w=1200')"></div>
+          </div>
+          <div class="py-12 px-6 max-w-xl lg:max-w-4xl lg:w-4/6">
+              <h2 class="text-3xl text-gray-800 font-bold">Max Cekot Kitchen</h2>
+              <p class="mt-4 text-gray-600">Apmeklēt "Max Cekot Kitchen" ir kā doties uz izslavētu operas izrādi. Arī šajā gadījumā pats vietas apmeklējums vien ir notikums – restorāns atrodas nomaļā, pagājušā gadsimta kokapstrādes fabrikas ēkā. Atvērts vien trīs dienas nedēļā, "Max Cekot Kitchen" ir vienīgais restorāns Rīgā, kas atsacījies no "à la carte" un piedāvā tikai "set-menu".
+              </p>
+              <div class="mt-8">
+                  <a href="https://goo.gl/maps/KGNtJJdEoRbJE4a57" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Kartē</a>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+
+<div>
+  <div class="bg-gray-50 lg:py-4 ml-16 items-center lg:flex ">
+      <div class="bg-white lg:mx-8 lg:flex lg:w-[90%] lg:shadow-lg lg:rounded-lg">
+          <div class="lg:w-1/3">
+              <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://www.liveriga.com/userfiles/images/apmekle/est-dzert/gardezu-restorani/barents/barents_edieni-15-of-20-1.jpg?w=780&mode=3%3A2%7Ccrop&s=9a052ce833b6ce19ff5e6eb4fa37c464')"></div>
+          </div>
+          <div class="py-12 px-6 max-w-xl lg:max-w-4xl lg:w-4/6">
+              <h2 class="text-3xl text-gray-800 font-bold">Barents</h2>
+              <p class="mt-4 text-gray-600">Restorāns "Barents" lepojas ar savu ziemeļu izcelsmi un aicina katru viesi svinēt šī reģiona garšas kopā, baudot svaigākos, augstākās raudzes vietējos produktus - auksto ūdeņu jūras veltes, dārzeņus un citus labumus, kas rūpīgi atlasīti no neatkarīgiem vietējiem lauksaimniekiem un zvejniekiem.
+              </p>
+              <div class="mt-8">
+                  <a href="https://goo.gl/maps/Sp4ocaBj9qQDkLoq9" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Kartē</a>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+
+<div>
+  <div class="bg-gray-50 lg:py-4 ml-16 items-center lg:flex ">
+      <div class="bg-white lg:mx-8 lg:flex lg:w-[90%] lg:shadow-lg lg:rounded-lg">
+          <div class="lg:w-1/3">
+              <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://www.liveriga.com/userfiles/images/est-dzert/restorani/latviesu-virtuve/kolonade-musu-stasti/kolonade-interjers-full-august-03_-2017-3_web.jpg?w=780&mode=3:2|crop')"></div>
+          </div>
+          <div class="py-12 px-6 max-w-xl lg:max-w-4xl lg:w-4/6">
+              <h2 class="text-3xl text-gray-800 font-bold">Kolonāde. Mūsu stāsti...</h2>
+              <p class="mt-4 text-gray-600">Restorāns "Kolonāde. Mūsu stāsti..." atrodas starp Brīvības pieminekli, Latvijas Nacionālo operu un ''Laimas'' pulksteni - tam blakus esošie pilsētas parki ļauj baudīt vienu no skaistākajām Rīgas ainavām gadalaiku maiņās.
+              </p>
+              <div class="mt-8">
+                  <a href="https://goo.gl/maps/d5W7vcFNn6JKM9Ej9" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Kartē</a>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+
+    
+    <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col ">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <img src="/img/icon.jpeg" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"> 
+            <span class="ml-3 text-xl">Rīgas portals</span>
+          </a>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 Dominiks Segals </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+</body>
+</html>

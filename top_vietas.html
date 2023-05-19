@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/css/main.ad49aa9b.css" />
+  <link rel="stylesheet" href="css/weather.css" />
+ <style>
+.hover-image-scale {
+  z-index: 1;
+  overflow: hidden;
+}
+.hover-image-scale img {
+  transition: 1s;
+  display: block; 
+}
+.hover-image-scale img:hover {
+  transform: scale(1.2); 
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  min-height: 2em;
+  background: white;
+}
+ </style> 
+</head>
+<header class="text-gray-600 body-font sticky z-40">
+    <div class="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center shadow-md shadow-500">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="img/icon.jpeg" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full">
+        <span class="ml-3 text-xl">Rīgas portals</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a href="/" class="mr-5 hover:text-gray-900 font-bold">PAR RĪGU</a>
+        <a href="index.html" class="mr-5 hover:text-gray-900 font-bold">KO REDZĒT</a>
+        <a href="/events.html" class="mr-5 hover:text-gray-900 font-bold">PASĀKUMI</a>
+      </nav>
+      <a href="https://github.com/DevNexS/events" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">GitHub
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path></a>
+        </svg>
+      </button>
+    </div>
+  </header>
+<body class="bg-gray-50 ">
+
+  <section class="w-full bg-nordic-gray-light flex md:pt-0 md:items-center" style="max-width:2560px; height: 40rem;">
+    <img class="absolute w-full md:items-center object-cover object-centre" style="max-width:2560px; height: 40rem; filter: brightness(70%);" src="https://cdn.turkishairlines.com/m/1d0eb070ea8bb6e7/original/1400-660-jpg.jpg">
+    <div class="container mx-1/2 mb-36 mt-12 text-center">    
+        <div class="absolute absolute-col w-full px-6 tracking-wide">
+            <h1 class="text-white text-5xl my-4 font-Formular">TOP VIETAS</h1>
+            <p class="text-lg leading-relaxed text-white font-Formular lg:w-3/5 mx-auto leading-relaxed" href="#">Ikvienam, kurš Rīgā viesojas pirmo reizi, ir jāsāk ar ikonisko objektu apskati. Pilsētas vairāk nekā 800 gadus ilgo vēsturi vislabāk sākt iepazīt Vecrīgā un turpināt Rīgas klusajā centrā, baudot krāšņo Jūgendstila arhitektūru.</p>
+        </div>
+      </div>
+    </section>
+
+  <section class="bg-blueGray-50 mt-2">
+    <div class=" flex ml-28 items-start bg-blueGray-50">
+        <div class="flex items-center py-4 overflow-y-auto whitespace-nowrap ">
+          <a href="/" class="text-gray-600 dark:text-gray-400 ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+          </a>
+      
+          <span class="mx-5 text-gray-500 dark:text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </span>
+      
+          <a href="/events.html" class="text-gray-600 dark:text-gray-400 h4ver:underline"> Par Rīgu </a>
+      
+          <span class="mx-5 text-gray-500 dark:text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </span>
+      
+          <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline"> Ko redzēt </a>
+        </div>
+      </div>
+    </section>
+
+<div>
+  <div class="bg-gray-50 lg:py-4 ml-16 items-center lg:flex ">
+      <div class="bg-white lg:mx-8 lg:flex lg:w-[90%] lg:shadow-lg lg:rounded-lg">
+          <div class="lg:w-1/3">
+              <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://www.liveriga.com/userfiles/images/apmekle/ko-redzet/top-vietas/vecriga/52402233658_b5cab47b2d_3k.jpg?w=1200')"></div>
+          </div>
+          <div class="py-12 px-6 max-w-xl lg:max-w-4xl lg:w-4/6">
+              <h2 class="text-3xl text-gray-800 font-bold">Vecrīga</h2>
+              <p class="mt-4 text-gray-600">Vecrīga ir Rīgas pilsētas senākā daļa un pilsētas centrs, kā arī tūristu iecienītākā atpūtas un izklaides vieta. 1997. gadā Rīgas vēsturisko centru UNESCO iekļāva Pasaules mantojuma sarakstā. Vecrīgā ir daudzveidīga apbūve un lielākajai daļai ēku ir kultūras pieminekļa statuss. Arhitektūrā pārstāvēti dažādi virzieni – romānika un gotika, baroka laikmeta celtnes, kā arī klasicisma un modernisma ēku paraugi. Pēc Latvijas neatkarības atjaunošanas daudzas ēkas Vecrīgā tika rekonstruētas vai celtas no jauna, tādejādi atjaunojot vēsturisko apbūvi.
+              </p>
+              <div class="mt-8">
+                  <a href="https://goo.gl/maps/zJQvNwXXUe4ws2XEA" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Kartē</a>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+
+<div>
+  <div class="bg-gray-50 lg:py-4 ml-16 items-center lg:flex ">
+      <div class="bg-white lg:mx-8 lg:flex lg:w-[90%] lg:shadow-lg lg:rounded-lg">
+          <div class="lg:w-1/3">
+              <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://www.liveriga.com/userfiles/images/apmekle/ko-redzet/apskates-vietas/arhitektura/latvijas-nacionala-biblioteka/4a1a3691.jpg?w=780&mode=3:2|crop')"></div>
+          </div>
+          <div class="py-12 px-6 max-w-xl lg:max-w-4xl lg:w-4/6">
+              <h2 class="text-3xl text-gray-800 font-bold">Latvijas Nacionālā bibliotēka</h2>
+              <p class="mt-4 text-gray-600">Iepretim Vecrīgai Daugavas kreisajā krastā paceļas Latvijas Nacionālās bibliotēkas (LNB) ēka jeb Gaismas pils. Šī ir viena no vērienīgākajām kultūras būvēm atjaunotās Latvijas vēsturē. Bibliotēkas jaunā ēka tika atklāta 2014. gada augustā, to projektējis pasaulē atzītais latviešu arhitekts Gunārs Birkerts.
+              </p>
+              <div class="mt-8">
+                  <a href="https://goo.gl/maps/izEZ1gzRPLLUkPdd7" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Kartē</a>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+
+<div>
+  <div class="bg-gray-50 lg:py-4 ml-16 items-center lg:flex ">
+      <div class="bg-white lg:mx-8 lg:flex lg:w-[90%] lg:shadow-lg lg:rounded-lg">
+          <div class="lg:w-1/3">
+              <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://www.liveriga.com/userfiles/images/apmekle/ko-redzet/apskates-vietas/baznicas/rigas-doms/4a1a2607.jpg?w=780&mode=3:2|crop')"></div>
+          </div>
+          <div class="py-12 px-6 max-w-xl lg:max-w-4xl lg:w-4/6">
+              <h2 class="text-3xl text-gray-800 font-bold">Rīgas Doms</h2>
+              <p class="mt-4 text-gray-600">Rīgas Doms Vecrīgas sirdi iekarojis jau kopš 1211. gada 25. jūlija. Savu tagadējo izskatu dievnams ieguva 19.gs.beigās, bet mūsdienās Rīgas Domā līdz ar dievkalpojumiem norisinās bagātīga kultūras dzīve – notiek vietējo un ārvalstu mākslinieku koncerti, kā arī tiek izstādītas dažādas mākslas ekspozīcijas.
+              </p>
+              <div class="mt-8">
+                  <a href="https://goo.gl/maps/KGNtJJdEoRbJE4a57" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Kartē</a>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+
+<div>
+  <div class="bg-gray-50 lg:py-4 ml-16 items-center lg:flex ">
+      <div class="bg-white lg:mx-8 lg:flex lg:w-[90%] lg:shadow-lg lg:rounded-lg">
+          <div class="lg:w-1/3">
+              <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://www.liveriga.com/userfiles/images/apmekle/ko-redzet/top-vietas/rigas-nacionalais-zoologiskais-darzs-1/4a1a1961.jpg?w=1200')"></div>
+          </div>
+          <div class="py-12 px-6 max-w-xl lg:max-w-4xl lg:w-4/6">
+              <h2 class="text-3xl text-gray-800 font-bold">Rīgas Nacionālais zooloģiskais dārzs</h2>
+              <p class="mt-4 text-gray-600">Zaļākajā no Rīgas rajoniem – Mežaparkā – kopš 1912.gada darbojas Rīgas Zooloģiskais dārzs. Šodien zooloģiskā dārza dzīvnieku kolekcijā ir ap 400 sugu, tostarp lauvas un žirafes, tīģeri un krokodili, ķenguri un degunlācīši, Latvijas dzīvnieki un tropu sugas. Zooloģiskais dārzs ir lieliska vieta atpūtai pieaugušajiem un bērniem – skaistā Ķīšezera krastā, priežu ielokā var pavadīt kaut visu dienu!
+              </p>
+              <div class="mt-8">
+                  <a href="https://goo.gl/maps/Sp4ocaBj9qQDkLoq9" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Kartē</a>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+
+<div>
+  <div class="bg-gray-50 lg:py-4 ml-16 items-center lg:flex ">
+      <div class="bg-white lg:mx-8 lg:flex lg:w-[90%] lg:shadow-lg lg:rounded-lg">
+          <div class="lg:w-1/3">
+              <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://www.liveriga.com/userfiles/images/apmekle/ko-redzet/top-vietas/brivibas-piemineklis/52401575165_84366ed94e_5k.jpg?w=780&mode=3:2|crop')"></div>
+          </div>
+          <div class="py-12 px-6 max-w-xl lg:max-w-4xl lg:w-4/6">
+              <h2 class="text-3xl text-gray-800 font-bold">Brīvības piemineklis</h2>
+              <p class="mt-4 text-gray-600">Jau gandrīz simts gadus pašā Rīgas centrā slejas Brīvības piemineklis – granītā un varā ietērptais mākslas darbs simbolizē latviešu tautas vēlmi pēc neatkarības un brīvības. Brīvības statujas rokās spoži mirdz trīs zvaigznes, kas veltītas Latvijas kultūrvēsturiskajiem reģioniem – Kurzemei, Vidzemei un Latgalei. Tā pakājē iekalti vārdi – “Tēvzemei un Brīvībai”. Brīvības piemineklis tika atklāts 1935.gada 18.novembrī, to uzcēla par tautas saziedotajiem līdzekļiem. Brīvības piemineklis ir 42,7 metrus augsts.
+              </p>
+              <div class="mt-8">
+                  <a href="https://goo.gl/maps/d5W7vcFNn6JKM9Ej9" class="bg-gray-900 text-gray-100 px-5 py-3 font-semibold rounded">Kartē</a>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+
+    
+    <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col ">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <img src="/img/icon.jpeg" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"> 
+            <span class="ml-3 text-xl">Rīgas portals</span>
+          </a>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 Dominiks Segals </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+</body>
+</html>
