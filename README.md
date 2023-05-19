@@ -13,3 +13,9 @@ Dokumentācija sniedz informāciju par vietni "Rīgas portals", kas paredzēta d
 * "Laikapstākļi": Ļauj skatīt temperatūru un laika apstākļus noteiktā laikā ("Par Rīgu" sadaļā)
 * "Ko redzēt": Satur informāciju par dažādām apskates vietām Rīgā.
 * "Pasākumi": Katram notikumam ir savs individuālais lappuse ar detalizētu informāciju, ieskaitot aprakstu, datumus, atrašanās vietu un citu saistīto informāciju.
+
+![main](https://github.com/DevNexS/events/assets/78120977/0dd75214-0b71-4f03-8264-e5048719f5ce)
+![events](https://github.com/DevNexS/events/assets/78120977/9d694e27-f08a-40ca-a542-6c6bafd6ad37)
+![hokejs](https://github.com/DevNexS/events/assets/78120977/55c2fe2f-2ae8-449c-a450-9a395bfcf5f5)
+![top-vietas](https://github.com/DevNexS/events/assets/78120977/9bddbd63-69b3-49bd-a977-0744f7991b98)
+![vietas](https://github.com/DevNexS/events/assets/78120977/3368601e-ad51-4243-ba8d-85596ce099d0)
