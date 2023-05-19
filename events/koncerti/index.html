@@ -26,16 +26,15 @@
 }
  </style> 
 </head>
-<header class="text-gray-700 body-font sticky z-40">
+<header class="text-gray-600 body-font sticky z-40">
     <div class="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center shadow-md shadow-500">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <img src="img/icon.jpeg" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full">
         <span class="ml-3 text-xl">Rīgas portals</span>
       </a>
       <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a href="index.html" class="mr-5 hover:text-gray-900 font-bold">PAR RĪGU</a>
-        <a href="index.html" class="mr-5 hover:text-gray-900 font-bold">KO REDZĒT</a>
-        <a href="#" class="mr-5 hover:text-gray-900 font-bold">PASĀKUMI</a>
+        <a href="index.html" class="mr-5 hover:text-gray-900 font-bold">Par Rīgu</a>
+        <a href="#" class="mr-5 hover:text-gray-900 font-bold">Pasākumi</a>
       </nav>
       <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
@@ -76,44 +75,44 @@
     <div class=" md:ml-auto w-full md:py-8 mt-8 md:mt-0">
     <div class="px-32 grid grid-cols-4 gap-6 ">
     <!--Filter-->
-        <div class="bg-white ">
-            <div class=" inset-0 z-40 flex ">
-                <div class=" h-[44vh] w-full max-w-xs flex-col bg-white py-4 pb-12 shadow-xl">
-                    <div class="flex items-center justify-between px-4">
-                      <h2 class="text-lg font-medium text-gray-900">Filters</h2>
-                      <button type="button" class="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400">
-                        <span class="sr-only">Close menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
-                    </div>
-                    <form class="mt-4 border-t border-gray-200">
-                        <h3 class="sr-only">Categories</h3>
-                        <ul role="list" class="px-2 py-3 font-medium text-gray-900">
-                          <li>
-                            <a href="#" class="block px-2 py-3">Visi</a>
-                          </li>
-                          <li>
-                            <a href="/events/sports/" class="block px-2 py-3">Sports</a>
-                          </li>
-                          <li>
-                            <a href="/events/festivali/" class="block px-2 py-3">Festivāli un svētki</a>
-                          </li>
-                          <li>
-                            <a href="/events/koncerti/" class="block px-2 py-3">Koncerti</a>
-                          </li>
-                          <li>
-                            <a href="/events/opera/" class="block px-2 py-3">Opera, Balets</a>
-                          </li>
-                          <li>
-                            <a href="/events/tirdzini/" class="block px-2 py-3">Tirdziņi</a>
-                          </li>
-                        </ul>
-                    </form>
+    <div class="bg-white ">
+        <div class=" inset-0 z-40 flex ">
+            <div class=" h-[44vh] w-full max-w-xs flex-col bg-white py-4 pb-12 shadow-xl">
+                <div class="flex items-center justify-between px-4">
+                  <h2 class="text-lg font-medium text-gray-900">Filters</h2>
+                  <button type="button" class="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
+                <form class="mt-4 border-t border-gray-200">
+                    <h3 class="sr-only">Categories</h3>
+                    <ul role="list" class="px-2 py-3 font-medium text-gray-900">
+                      <li>
+                        <a href="/events.html" class="block px-2 py-3">Visi</a>
+                      </li>
+                      <li>
+                        <a href="/events/sports/" class="block px-2 py-3">Sports</a>
+                      </li>
+                      <li>
+                        <a href="/events/festivali/" class="block px-2 py-3">Festivāli un svētki</a>
+                      </li>
+                      <li>
+                        <a href="#" class="block px-2 py-3">Koncerti</a>
+                      </li>
+                      <li>
+                        <a href="/events/opera/" class="block px-2 py-3">Opera, Balets</a>
+                      </li>
+                      <li>
+                        <a href="/events/tirdzini/" class="block px-2 py-3">Tirdziņi</a>
+                      </li>
+                    </ul>
+                </form>
             </div>
         </div>
+    </div>
 <!--Events-->
     <div class="justify-center h-[45vh] rounded-[20px] hover:shadow-2xl transform duration-200">
         <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[350px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
@@ -124,7 +123,7 @@
                 <div class="mb-3 flex items-center justify-between px-1 md:items-start">
                     <div class="mb-2">
                         <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Sports </p>
-                        <p class="text-lg font-bold text-navy-700"> IIHF Pasaules čempionāts hokejā</p>
+                        <p class="text-lg font-bold text-navy-700"> IIHF Pasaules čempionāts hokejā 2023 | 12-28 Mai</p>
                     </div>
                     <div class=" bg-yellow-200 py-1.5 px-5 rounded-full mt-2" style="width: 150px;">
                         <p class="focus:outline-none text-xs text-yellow-700">12 - 28 Mai</p>
@@ -148,10 +147,10 @@
                 <div class="mb-3 flex items-center justify-between px-1 md:items-start">
                     <div class="mb-2">
                         <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Festivāli un svētki </p>
-                        <p class="text-lg font-bold text-navy-700"> Kultūras vasaras koncerti Vērmanes dārzā </p>
+                        <p class="text-lg font-bold text-navy-700"> IIHF Pasaules čempionāts hokejā 2023 </p>
                     </div>
                     <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 130px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">13 Jūl</p>
+                        <p class="focus:outline-none text-xs text-yellow-700">12 - 28 Mai</p>
                     </div>
                 </div>
                 <div class="flex items-center justify-between md:items-center lg:justify-between ">
@@ -382,8 +381,8 @@
     </div>
 </div>
 </div>
-<footer class="text-gray-600 body-font ">
-    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col ">
+<footer class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
         <img src="img/icon.jpeg" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full">
         <span class="ml-3 text-xl">Rīgas portals</span>
