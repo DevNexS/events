@@ -7,10 +7,10 @@ Dokumentācija sniedz informāciju par vietni "Rīgas portals", kas paredzēta d
 * Notikumu parādīšana: Vietne sniedz lietotājam informāciju par dažādiem notikumiem, tostarp nosaukumu, datumu, aprakstu, atrašanās vietu un citu noderīgu informāciju. Lietotāji var pārlūkot notikumus un izvēlēties interesējošos.
 * Pasākumu kalendārs: Vietne piedāvā pasākumu kalendāru, kurā tiek parādīti datumi un notikumi. Tas ļauj lietotājiem ātri orientēties grafikā un plānot savu laiku.
 * Informācija par apskates vietām: Papildus notikumiem vietne arī sniedz informāciju par dažādām apskates vietām un vietām, ko var apmeklēt Rīgā. Lietotāji var iepazīties ar aprakstiem, fotogrāfijām un citu informāciju par apskates vietām.
+* "Laikapstākļi": Ļauj skatīt temperatūru un laika apstākļus noteiktā laikā ("Par Rīgu" sadaļā)
 ## Vietnes navigācija
 ### Navigācijas izvēlne atrodas katras lapas augšdaļā un ietver šādas sadaļas:
 * "Par Rīgu": Sākumlapā ir apkopota informācija par populāriem un aktuāliem notikumiem, kā arī informācija par esošajām akcijām un ieteikumiem.
-* "Laikapstākļi": Ļauj skatīt temperatūru un laika apstākļus noteiktā laikā ("Par Rīgu" sadaļā)
 * "Ko redzēt": Satur informāciju par dažādām apskates vietām Rīgā.
 * "Pasākumi": Katram notikumam ir savs individuālais lappuse ar detalizētu informāciju, ieskaitot aprakstu, datumus, atrašanās vietu un citu saistīto informāciju.
 
