@@ -1,0 +1,114 @@
+{
+    "sports": [
+        {
+            "id": "Sports",
+            "image": "/img/pasakumi/hokejs.webp",
+            "nosaukums": "IIHF Pasaules čempionāts hokejā",
+            "komentari": "Daži komentāri",
+            "datums": "12 - 28 Mai",
+            "price": "Biļetes: 29 - 135 EUR",
+            "fullpage": "/events/sports/hokejs.html"          
+        }
+    ],
+    "festivali": [
+        {
+            "id": "Festivāli un svētki",
+            "image": "/img/pasakumi/vermanes.webp",
+            "nosaukums": "Kultūras vasaras koncerti Vērmanes dārzā",
+            "komentari": "Daži komentāri",
+            "datums": "13 Jūl",
+            "price": "Biļetes: Ieeja par brīvu",
+            "fullpage": "/events/festivali/vermanes.html"
+        }
+    ],
+    "koncerti": [
+        {
+            "id": "Koncerti",
+            "image": "/img/pasakumi/osokina.webp",
+            "nosaukums": "Osokina Brīvības festivāls Ukrainai 2023",
+            "komentari": "Daži komentāri",
+            "datums": "20 Mai",
+            "price": "Biļetes: 10 - 60 EUR",
+            "fullpage": "/events/koncerti/osokina.html"
+        },
+        {
+            "id": "Koncerti",
+            "image": "/img/pasakumi/luk_ta.webp",
+            "nosaukums": "Muzikālā izrāde 'Lūk, tā!' – veltījums Viktoram Cojam ",
+            "komentari": "Daži komentāri",
+            "datums": "23 Mai",
+            "price": "Biļetes: 15 - 45 EUR",
+            "fullpage": "/events/koncerti/luk_ta.html"
+        },
+        {
+            "id": "Kino | Koncerti",
+            "image": "/img/pasakumi/splendid.webp",
+            "nosaukums": "Splendid Palace simtās jubilejas īpašā programma",
+            "komentari": "Daži komentāri",
+            "datums": "24 Mai",
+            "price": "Biļetes: 4.50 - 8 EUR",
+            "fullpage": "/events/koncerti/splendid.html"
+        },
+        {
+            "id": "Teātris | Koncerti",
+            "image": "/img/pasakumi/hamlets.webp",
+            "nosaukums": "Izrāde 'Hamlets' <br><br>",
+            "komentari": "Daži komentāri",
+            "datums": "26 Mai",
+            "price": "Biļetes: 10.50 - 30 EUR",
+            "fullpage": "/events/koncerti/hamlets.html"
+        }
+    ],
+    "opera":
+    [
+        {
+            "id": "Opera",
+            "image": "/img/pasakumi/dons_kihots.webp",
+            "nosaukums": "Balets 'Dons Kihots'<br><br>",
+            "komentari": "Daži komentāri",
+            "datums": "31 Mar - 19 Mai",
+            "price": "Biļetes: 7 - 35 EUR",
+            "fullpage": "/events/opera/don_kihots.html"
+        },
+        {
+            "id": "Opera",
+            "image": "/img/pasakumi/pikjadama.webp",
+            "nosaukums": "Opera 'Pīķa dāma'<br><br>",
+            "komentari": "Daži komentāri",
+            "datums": "18- 20 Mai",
+            "price": "Biļetes: 9 - 55 EUR",
+            "fullpage": "/events/opera/pika_dama.html"
+        },
+        {
+            "id": "Opera",
+            "image": "/img/pasakumi/nizinskis.webp",
+            "nosaukums": "Balets 'Ņižinskis'<br><br>",
+            "komentari": "Daži komentāri",
+            "datums": "02 Feb - 21 Mai",
+            "price": "Biļetes: 6 - 35 EUR",
+            "fullpage": "/events/opera/nizinskis.html"
+        }
+    ],
+    "tirdzini":
+    [
+        {
+            "id": "Tirdzini",
+            "image": "/img/pasakumi/kalnciema.webp",
+            "nosaukums": "Kalnciema kvartāla tirgus",
+            "komentari": "Daži komentāri",
+            "datums": "20 Mai",
+            "price": "Biļetes: Ieeja par brīvu",
+            "fullpage": "/events/tirdzini/kalnciema.html"
+        },
+        {
+            "id": "Tirdzini",
+            "image": "/img/pasakumi/riga_kramu.webp",
+            "nosaukums": "Rīgas krāmu tirdziņš<br><br>",
+            "komentari": "Daži komentāri",
+            "datums": "27 Mai",
+            "price": "Biļetes: Ieeja par brīvu",
+            "fullpage": "/events/tirdzini/rigas_kramu.html"
+        }
+    ]
+    
+}

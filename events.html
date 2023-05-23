@@ -73,8 +73,9 @@
 </div>
 
     <!--Cards with Events-->
-    <div class=" md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-    <div class="px-32 grid grid-cols-4 gap-6 ">
+    <div class=" md:ml-auto w-full md:py-8 mt-8 md:mt-0" >
+    <div class="px-32 grid grid-cols-4 gap-6 tb1 tb2 tb3 tb4 tb5" id="maintable">
+        
     <!--Filter-->
         <div class="bg-white ">
             <div class=" inset-0 z-40 flex shadow-xl ">
@@ -92,296 +93,280 @@
                         <h3 class="sr-only">Categories</h3>
                         <ul role="list" class="px-2 py-3 font-medium text-gray-900">
                           <li>
-                            <a href="#" class="block px-2 py-3">Visi</a>
+                            <div onclick="allevents();"><a href="#" class="block px-2 py-3">Visi</a></div>
                           </li>
                           <li>
-                            <a href="/events/sports/" class="block px-2 py-3">Sports</a>
+                            <div onclick="sport();"><a href="#" class="block px-2 py-3">Sports</a></div>
                           </li>
                           <li>
-                            <a href="/events/festivali/" class="block px-2 py-3">Festivāli un svētki</a>
+                            <div onclick="festivali();"><a href="#" class="block px-2 py-3">Festivāli un svētki</a></div>
                           </li>
                           <li>
-                            <a href="/events/koncerti/" class="block px-2 py-3">Koncerti</a>
+                            <div onclick="koncerti();"><a href="#" class="block px-2 py-3">Koncerti</a></div>
                           </li>
                           <li>
-                            <a href="/events/opera/" class="block px-2 py-3">Opera, Balets</a>
+                            <div onclick="opera();"><a href="#" class="block px-2 py-3">Opera, Balets</a></div>
                           </li>
                           <li>
-                            <a href="/events/tirdzini/" class="block px-2 py-3">Tirdziņi</a>
+                            <div onclick="tirdzini();"><a href="#" class="block px-2 py-3">Tirdziņi</a></div>
                           </li>
                         </ul>
                     </form>
                 </div>
             </div>
         </div>
-<!--Events-->
-    <div class="justify-center h-[44vh] rounded-[20px] hover:shadow-2xl transform duration-200">
+      </div>
+   </div>
+<script>
+                    fetch("/events.json")
+                      .then(response => response.json())
+                      .then(data => {
+                        console.log(data.sports[i]);
+                          for (var i = 0; i < data.sports.length; i++){
+                              
+                              let id = data.sports[i].id;
+                              let image = data.sports[i].image;
+                              let name = data.sports[i].nosaukums;
+                              let koment = data.sports[i].komentari;
+                              let datums = data.sports[i].datums;
+                              let price = data.sports[i].price;
+                              let fullpage = data.sports[i].fullpage;
+                              var x = document.getElementsByClassName("tb1");
+                                x[0].innerHTML += `
+    <div class="justify-center h-[44vh] rounded-[20px] hover:shadow-2xl transform duration-200" id="sports">
         <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[350px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
             <div class="h-full w-full">
                 <div class="relative w-full hover-image-scale rounded-xl object-cover " >
-                    <img  src="/img/pasakumi/hokejs.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
+                    <img  src="${image}" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
                 </div>
                 <div class="mb-3 flex items-center justify-between px-1 md:items-start">
                     <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Sports </p>
-                        <p class="text-lg font-bold text-navy-700"> IIHF Pasaules čempionāts hokejā</p>
+                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">${id} </p>
+                        <p class="text-lg font-bold text-navy-700"> ${name}</p>
                     </div>
                     <div class=" bg-yellow-200 py-1.5 px-5 rounded-full mt-2" style="width: 110px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">12 - 28 Mai</p>
+                        <p class="focus:outline-none text-xs text-yellow-700">${datums}</p>
                     </div>
                 </div>
                 <div class="flex items-center justify-between md:items-center lg:justify-between ">
                     <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: 29 - 135 <span>EUR</span></p>
+                        <p class="!mb-0 text-sm font-bold text-brand-500">${price}</p>
                     </div>
-                    <a href="/events/sports/hokejs.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
+                    <a href="${fullpage}" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="h-[44vh] rounded-[20px] hover:shadow-2xl transform duration-200">
+    </div>`;
+}})
+                      
+                       fetch("/events.json")
+                      .then(response => response.json())
+                      .then(data => {
+                          for (var i = 0; i < data.festivali.length; i++){
+                              
+                              let id_2 = data.festivali[i].id;
+                              let image_2 = data.festivali[i].image;
+                              let name_2 = data.festivali[i].nosaukums;
+                              let koment_2 = data.festivali[i].komentari;
+                              let datums_2 = data.festivali[i].datums;
+                              let price_2 = data.festivali[i].price;
+                              let fullpage_2 = data.festivali[i].fullpage;
+                              
+                              var x = document.getElementsByClassName("tb2");
+                                x[0].innerHTML += `
+    <div class="justify-center h-[44vh] rounded-[20px] hover:shadow-2xl transform duration-200" id="festivali">
         <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[350px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
             <div class="h-full w-full">
-                <div class="relative w-full hover-image-scale rounded-xl ">
-                    <img src="/img/pasakumi/vermanes.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
+                <div class="relative w-full hover-image-scale rounded-xl object-cover " >
+                    <img  src="${image_2}" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
                 </div>
                 <div class="mb-3 flex items-center justify-between px-1 md:items-start">
                     <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Festivāli un svētki </p>
-                        <p class="text-lg font-bold text-navy-700"> Kultūras vasaras koncerti Vērmanes dārzā </p>
+                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">${id_2} </p>
+                        <p class="text-lg font-bold text-navy-700"> ${name_2}</p>
                     </div>
-                    <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 90px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">13 Jūl</p>
+                    <div class=" bg-yellow-200 py-1.5 px-5 rounded-full mt-2" style="width: 110px;">
+                        <p class="focus:outline-none text-xs text-yellow-700">${datums_2}</p>
                     </div>
                 </div>
                 <div class="flex items-center justify-between md:items-center lg:justify-between ">
                     <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: Ieeja par brīvu <span></span></p>
+                        <p class="!mb-0 text-sm font-bold text-brand-500">${price_2}</p>
                     </div>
-                <a href="/events/festivali/vermanes.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
+                    <a href="${fullpage_2}" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="h-[43vh] rounded-[20px] hover:shadow-2xl transform duration-200">
+    </div>`;
+}})
+                       fetch("/events.json")
+                      .then(response => response.json())
+                      .then(data => {
+                          for (var i = 0; i < data.koncerti.length; i++){
+                              
+                              let id3 = data.koncerti[i].id;
+                              let image3 = data.koncerti[i].image;
+                              let name3 = data.koncerti[i].nosaukums;
+                              let koment3 = data.koncerti[i].komentari;
+                              let datums3 = data.koncerti[i].datums;
+                              let price3 = data.koncerti[i].price;
+                              let fullpage3 = data.koncerti[i].fullpage;
+                              var x = document.getElementsByClassName("tb3");
+                                x[0].innerHTML += `
+    <div class="justify-center h-[44vh] rounded-[20px] hover:shadow-2xl transform duration-200" id="koncerti">
         <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[350px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
             <div class="h-full w-full">
-                <div class="relative w-full hover-image-scale rounded-xl ">
-                    <img src="/img/pasakumi/dons_kihots.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
+                <div class="relative w-full hover-image-scale rounded-xl object-cover " >
+                    <img  src="${image3}" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
                 </div>
                 <div class="mb-3 flex items-center justify-between px-1 md:items-start">
                     <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Opera</p>
-                        <p class="text-lg font-bold text-navy-700"> Balets "Dons Kihots"</p>
+                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">${id3} </p>
+                        <p class="text-lg font-bold text-navy-700"> ${name3}</p>
                     </div>
-                    <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 130px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">31 Mar - 19 Mai</p>
+                    <div class=" bg-yellow-200 py-1.5 px-5 rounded-full mt-2" style="width: 110px;">
+                        <p class="focus:outline-none text-xs text-yellow-700">${datums3}</p>
                     </div>
-                </div><br>
+                </div>
                 <div class="flex items-center justify-between md:items-center lg:justify-between ">
                     <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: 7 - 35 <span>EUR</span></p>
+                        <p class="!mb-0 text-sm font-bold text-brand-500">${price3}</p>
                     </div>
-                <a href="/events/opera/don_kihots.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
+                    <a href="${fullpage3}" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="h-[41vh] rounded-[20px] hover:shadow-2xl transform duration-200">
-        <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[400px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
+    </div>`;
+}})
+fetch("/events.json")
+                      .then(response => response.json())
+                      .then(data => {
+                        console.log(data.opera[i]);
+                          for (var i = 0; i < data.opera.length; i++){
+                              
+                              let id4 = data.opera[i].id;
+                              let image4 = data.opera[i].image;
+                              let name4 = data.opera[i].nosaukums;
+                              let koment4 = data.opera[i].komentari;
+                              let datums4 = data.opera[i].datums;
+                              let price4 = data.opera[i].price;
+                              let fullpage4 = data.opera[i].fullpage;
+                              var x = document.getElementsByClassName("tb4");
+                                x[0].innerHTML += `
+    <div class="justify-center h-[44vh] rounded-[20px] hover:shadow-2xl transform duration-200" id="opera">
+        <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[350px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
             <div class="h-full w-full">
-                <div class="relative w-full hover-image-scale rounded-xl ">
-                    <img src="/img/pasakumi/kalnciema.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
+                <div class="relative w-full hover-image-scale rounded-xl object-cover " >
+                    <img  src="${image4}" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
                 </div>
                 <div class="mb-3 flex items-center justify-between px-1 md:items-start">
                     <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Tirdzini</p>
-                        <p class="text-lg font-bold text-navy-700"> Kalnciema kvartāla tirgus</p>
+                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">${id4} </p>
+                        <p class="text-lg font-bold text-navy-700"> ${name4}</p>
                     </div>
-                    <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 90px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">20 Mai</p>
+                    <div class=" bg-yellow-200 py-1.5 px-5 rounded-full mt-2" style="width: 110px;">
+                        <p class="focus:outline-none text-xs text-yellow-700">${datums4}</p>
                     </div>
                 </div>
                 <div class="flex items-center justify-between md:items-center lg:justify-between ">
                     <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: Ieeja par brīvu <span></span></p>
+                        <p class="!mb-0 text-sm font-bold text-brand-500">${price4}</p>
                     </div>
-                <a href="/events/tirdzini/kalnciema.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
+                    <a href="${fullpage4}" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
                 </div>
             </div>
         </div>
-    </div>
+    </div>`;
+}})
+fetch("/events.json")
+                      .then(response => response.json())
+                      .then(data => {
+                        console.log(data.tirdzini[i]);
+                          for (var i = 0; i < data.tirdzini.length; i++){
+                              
+                              let id5 = data.tirdzini[i].id;
+                              let image5 = data.tirdzini[i].image;
+                              let name5 = data.tirdzini[i].nosaukums;
+                              let koment5 = data.tirdzini[i].komentari;
+                              let datums5 = data.tirdzini[i].datums;
+                              let price5 = data.tirdzini[i].price;
+                              let fullpage5 = data.tirdzini[i].fullpage;
+                              var x = document.getElementsByClassName("tb5");
+                                x[0].innerHTML += `
+    <div class="justify-center h-[44vh] rounded-[20px] hover:shadow-2xl transform duration-200" id="tirdzini">
+        <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[350px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
+            <div class="h-full w-full">
+                <div class="relative w-full hover-image-scale rounded-xl object-cover " >
+                    <img  src="${image5}" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
+                </div>
+                <div class="mb-3 flex items-center justify-between px-1 md:items-start">
+                    <div class="mb-2">
+                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">${id5} </p>
+                        <p class="text-lg font-bold text-navy-700"> ${name5}</p>
+                    </div>
+                    <div class=" bg-yellow-200 py-1.5 px-5 rounded-full mt-2" style="width: 110px;">
+                        <p class="focus:outline-none text-xs text-yellow-700">${datums5}</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between md:items-center lg:justify-between ">
+                    <div class="flex">
+                        <p class="!mb-0 text-sm font-bold text-brand-500">${price5}</p>
+                    </div>
+                    <a href="${fullpage5}" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
+                </div>
+            </div>
+        </div>
+    </div>`;
+}})
 
-    <div class="justify-center h-[43vh] rounded-[20px] hover:shadow-2xl transform duration-200">
-        <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[400px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
-            <div class="h-full w-full">
-                <div class="relative w-full hover-image-scale rounded-xl ">
-                    <img src="/img/pasakumi/pikjadama.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
-                </div>
-                <div class="mb-3 flex items-center justify-between px-1 md:items-start">
-                    <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Opera </p>
-                        <p class="text-lg font-bold text-navy-700">Opera "Pīķa dāma"</p>
-                    </div>
-                    <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 110px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">18 - 20 Mai</p>
-                    </div>
-                </div><br>
-                <div class="flex items-center justify-between md:items-center lg:justify-between ">
-                    <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: 9 - 55 <span>EUR</span></p>
-                    </div>
-                <a href="/events/opera/pika_dama.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="h-[44vh] rounded-[20px] hover:shadow-2xl transform duration-200">
-        <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[400px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
-            <div class="h-full w-full">
-                <div class="relative w-full hover-image-scale rounded-xl ">
-                    <img src="/img/pasakumi/osokina.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
-                </div>
-                <div class="mb-3 flex items-center justify-between px-1 md:items-start">
-                    <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Koncerti</p>
-                        <p class="text-lg font-bold text-navy-700"> Osokina Brīvības festivāls Ukrainai 2023 </p>
-                    </div>
-                    <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 110px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">20 Mai</p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between md:items-center lg:justify-between ">
-                    <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: 10 - 60 <span>EUR</span></p>
-                    </div>
-                <a href="/events/koncerti/osokina.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="h-[43vh] rounded-[20px] hover:shadow-2xl transform duration-200">
-        <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[400px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
-            <div class="h-full w-full">
-                <div class="relative w-full hover-image-scale rounded-xl ">
-                    <img src="/img/pasakumi/nizinskis.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
-                </div>
-                <div class="mb-3 flex items-center justify-between px-1 md:items-start">
-                    <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Opera </p>
-                        <p class="text-lg font-bold text-navy-700"> Balets "Ņižinskis" </p>
-                    </div>
-                    <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 130px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">02 Feb - 21 Mai</p>
-                    </div>
-                </div><br>
-                <div class="flex items-center justify-between md:items-center lg:justify-between ">
-                    <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: 6 - 35 <span>EUR</span></p>
-                    </div>
-                <a href="/events/opera/nizinskis.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="h-[44vh] rounded-[20px] hover:shadow-2xl transform duration-200">
-        <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[400px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
-            <div class="h-full w-full">
-                <div class="relative w-full hover-image-scale rounded-xl ">
-                    <img src="/img/pasakumi/luk_ta.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
-                </div>
-                <div class="mb-3 flex items-center justify-between px-1 md:items-start">
-                    <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Koncerti </p>
-                        <p class="text-lg font-bold text-navy-700"> Muzikālā izrāde "Lūk, tā!" – veltījums Viktoram Cojam </p>
-                    </div>
-                    <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 120px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">23 Mai</p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between md:items-center lg:justify-between ">
-                    <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: 15 - 45 <span>EUR</span></p>
-                    </div>
-                <a href="/events/koncerti/luk_ta.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="h-[44vh] rounded-[20px] hover:shadow-2xl transform duration-200">
-        <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[400px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
-            <div class="h-full w-full">
-                <div class="relative w-full hover-image-scale rounded-xl ">
-                    <img src="/img/pasakumi/splendid.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
-                </div>
-                <div class="mb-3 flex items-center justify-between px-1 md:items-start">
-                    <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Kino | Koncerti </p>
-                        <p class="text-lg font-bold text-navy-700"> Splendid Palace simtās jubilejas īpašā programma </p>
-                    </div>
-                    <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 110px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">24 Mai</p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between md:items-center lg:justify-between ">
-                    <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: 4.50 - 8 <span>EUR</span></p>
-                    </div>
-                    <a href="/events/koncerti/splendid.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="h-[43vh] rounded-[20px] hover:shadow-2xl transform duration-200">
-        <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[400px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
-            <div class="h-full w-full">
-                <div class="relative w-full hover-image-scale rounded-xl ">
-                    <img src="/img/pasakumi/hamlets.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
-                </div>
-                <div class="mb-3 flex items-center justify-between px-1 md:items-start">
-                    <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Teātris | Koncerti</p>
-                        <p class="text-lg font-bold text-navy-700"> Izrāde "Hamlets" </p>
-                    </div>
-                    <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 90px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">26 Mai</p>
-                    </div>
-                </div><br>
-                <div class="flex items-center justify-between md:items-center lg:justify-between ">
-                    <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: 10.50 - 30 <span>EUR</span></p>
-                    </div>
-                    <a href="/events/koncerti/hamlets.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="h-[43vh] rounded-[20px] hover:shadow-2xl transform duration-200">
-        <div class="!z-5 relative flex flex-col rounded-[20px] max-w-[400px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-4 3xl:p-![18px] bg-white undefined">
-            <div class="h-full w-full">
-                <div class="relative w-full hover-image-scale rounded-xl ">
-                    <img src="/img/pasakumi/riga_kramu.webp" class="mb-3 h-full w-full rounded-xl 3xl:h-full 3xl:w-full" alt="">
-                </div>
-                <div class="mb-3 flex items-center justify-between px-1 md:items-start">
-                    <div class="mb-2">
-                        <p class="mt-1 text-sm font-medium text-gray-600 md:mt-2">Tirdzini </p>
-                        <p class="text-lg font-bold text-navy-700"> Rīgas krāmu tirdziņš</p>
-                    </div>
-                    <div class=" bg-yellow-200 py-1.5 px-6 rounded-full mt-2" style="width: 90px;">
-                        <p class="focus:outline-none text-xs text-yellow-700">27 Mai</p>
-                    </div>
-                </div><br>
-                <div class="flex items-center justify-between md:items-center lg:justify-between ">
-                    <div class="flex">
-                        <p class="!mb-0 text-sm font-bold text-brand-500">Biļetes: Ieeja par brīvu <span></span></p>
-                    </div>
-                <a href="/events/tirdzini/rigas_kramu.html" class="linear rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700">Vairāk</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+function allevents(){
+  document.querySelectorAll('[id=sports], [id=festivali], [id=koncerti], [id=opera], [id=tirdzini]').forEach(element=> 
+  element.className = "visible"
+  )
+};
+
+function sport(){
+  document.querySelectorAll('[id=festivali], [id=koncerti], [id=opera], [id=tirdzini]').forEach(element=> 
+  element.className = "hidden"
+  )
+  document.querySelectorAll('[id=sports]').forEach(element2=> 
+  element2.className = "visible"
+  )
+};
+function festivali(){
+  document.querySelectorAll('[id=sports], [id=koncerti], [id=opera], [id=tirdzini]').forEach(element=> 
+    element.className = "hidden"
+  )
+  document.querySelectorAll('[id=festivali]').forEach(element2=> 
+  element2.className = "visible"
+  )
+};
+function koncerti(){
+  document.querySelectorAll('[id=festivali], [id=sports], [id=opera], [id=tirdzini]').forEach(element=> 
+  element.className = "hidden"
+  )
+  document.querySelectorAll('[id=koncerti]').forEach(element2=> 
+  element2.className = "visible"
+  )
+};
+function opera(){
+  document.querySelectorAll('[id=festivali], [id=koncerti], [id=sports], [id=tirdzini]').forEach(element=> 
+  element.className = "hidden"
+  )
+  document.querySelectorAll('[id=opera]').forEach(element2=> 
+  element2.className = "visible"
+  )
+}
+
+function tirdzini(){
+  document.querySelectorAll('[id=festivali], [id=koncerti], [id=opera], [id=sports]').forEach(element=> 
+  element.className = "hidden"
+  )
+  document.querySelectorAll('[id=tirdzini]').forEach(element2=> 
+  element2.className = "visible"
+  )
+};
+
+
+      </script>
 <footer class="text-gray-600 body-font bg-white">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col ">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
